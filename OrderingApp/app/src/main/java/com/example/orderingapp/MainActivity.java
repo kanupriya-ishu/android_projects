@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -42,12 +43,14 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void submitOrder(View view) {
+        EditText nameField = findViewById(R.id.name);
+        String name = nameField.getText().toString();
         CheckBox whippedCreamCheckBox = findViewById(R.id.whipped_cream_checkbox);
         boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
         CheckBox chocolateCheckbox = findViewById(R.id.chocolate_checkbox);
         boolean hasChocolate = chocolateCheckbox.isChecked();
         int price = calculatePrice();
-        String priceMessage = createOrderSummary(price, hasWhippedCream, hasChocolate);
+        String priceMessage = createOrderSummary(name, price, hasWhippedCream, hasChocolate);
         displayMessage(priceMessage);
 
     }
@@ -85,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
      * @param price of the order
      * @return text summary
      */
-    private String createOrderSummary(int price, boolean addWhippedCream, boolean addChocolate) {
-        String priceMessage = "Name: Kaptain Kunal";
+    private String createOrderSummary(String name, int price, boolean addWhippedCream, boolean addChocolate) {
+        String priceMessage = "Name: "+name;
         priceMessage += "\nAdd whipped cream? " + addWhippedCream;
         priceMessage += "\nAdd chocolate? " + addChocolate;
         priceMessage +=  "\nQuantity: " + quantity;
