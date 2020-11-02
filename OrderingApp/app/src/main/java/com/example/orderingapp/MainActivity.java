@@ -2,6 +2,8 @@ package com.example.orderingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.NumberFormat;
 
@@ -23,8 +26,13 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method is called when the plus button is clicked.
      */
-    public void  increment(View view)
-    {
+    public void increment(View view) {
+        if (quantity == 100) {
+            // Show an error message as a toast
+            Toast.makeText(this, "You cannot have more than 100 coffees", Toast.LENGTH_SHORT).show();
+            // Exit this method early because there's nothing left to do
+            return;
+        }
         quantity = quantity + 1;
         displayQuantity(quantity);
     }
@@ -32,8 +40,13 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method is called when the minus button is clicked.
      */
-    public void decrement(View view)
-    {
+    public void decrement(View view) {
+        if (quantity == 1) {
+            // Show an error message as a toast
+            Toast.makeText(this, "You cannot have less than 1 coffee", Toast.LENGTH_SHORT).show();
+            // Exit this method early because there's nothing left to do
+            return;
+        }
         quantity = quantity - 1;
         displayQuantity(quantity);
     }
@@ -51,8 +64,14 @@ public class MainActivity extends AppCompatActivity {
         boolean hasChocolate = chocolateCheckbox.isChecked();
         int price = calculatePrice(hasWhippedCream, hasChocolate);
         String priceMessage = createOrderSummary(name, price, hasWhippedCream, hasChocolate);
-        displayMessage(priceMessage);
 
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Coffee order for " + name);
+        intent.putExtra(Intent.EXTRA_TEXT, priceMessage);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
     /**
@@ -64,13 +83,6 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + numberOfCoffees);
     }
 
-    /**
-     * This method displays the given text on the screen.
-     */
-    private void displayMessage(String message) {
-        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        orderSummaryTextView.setText(message);
-    }
     /**
      * Calculates the price of the order.
      * @return total price
