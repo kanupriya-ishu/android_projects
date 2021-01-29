@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/relativelayout"
@@ -49,31 +49,69 @@
             android:layout_marginRight="10dp"
             android:orientation="horizontal" >
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:layout_marginRight="10dp"
                 android:background="#514663"
-                android:textColor="#ffffff"
-                android:textSize="24sp"
                 android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:gravity="center"
-                android:text="Top Attractions"/>
+                android:paddingBottom="5dp">
 
-            <TextView
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/image1"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textColor="#ffffff"
+                    android:layout_below="@id/image1"
+                    android:text="Top Attractions"
+                    android:layout_marginBottom="24sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:layout_marginRight="10dp"
                 android:background="#4D5382"
-                android:textColor="#ffffff"
-                android:textSize="24sp"
                 android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:gravity="center"
-                android:text="Eateries"/>
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/image2"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textColor="#ffffff"
+                    android:layout_below="@id/image2"
+                    android:text="Eateries"
+                    android:layout_marginBottom="24sp"/>
+
+            </RelativeLayout>
 
         </LinearLayout>
 
@@ -87,32 +125,69 @@
             android:layout_marginRight="10dp"
             android:orientation="horizontal" >
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:layout_marginRight="10dp"
                 android:background="#658E9C"
-                android:textColor="#ffffff"
-                android:textSize="24sp"
                 android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:gravity="center"
-                android:text="Religious Places"
-                />
+                android:paddingBottom="5dp">
 
-            <TextView
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/image3"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textColor="#ffffff"
+                    android:layout_below="@id/image3"
+                    android:text="Religious Places"
+                    android:layout_marginBottom="24sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:layout_marginRight="10dp"
                 android:background="#8CBA80"
-                android:textColor="#ffffff"
-                android:textSize="24sp"
                 android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:gravity="center"
-                android:text="Hotels"/>
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/image4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/image4"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textColor="#ffffff"
+                    android:layout_below="@id/image4"
+                    android:text="Hotels"
+                    android:layout_marginBottom="24sp"/>
+
+            </RelativeLayout>
 
         </LinearLayout>
     </LinearLayout>
