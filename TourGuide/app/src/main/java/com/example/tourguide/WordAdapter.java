@@ -33,7 +33,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         Word word = getItem(position);
 
 
-       
+
         return listItemView;
     }
 }
