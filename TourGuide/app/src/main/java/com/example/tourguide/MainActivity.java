@@ -14,6 +14,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        RelativeLayout topAttractions = findViewById(R.id.topAttractions);
+
+        topAttractions.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Intent attractionsIntent = new Intent(MainActivity.this, TopAttractions.class);
+
+                // Start the new activity
+                startActivity(attractionsIntent);
+            }
+        });
+
         RelativeLayout religiousPlaces = findViewById(R.id.religiousPlaces);
 
         religiousPlaces.setOnClickListener(new View.OnClickListener() {

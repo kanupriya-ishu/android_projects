@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:layout_width="88dp"
+        android:layout_height="190dp" />
 
     <RelativeLayout
         android:id="@+id/text_container"
@@ -25,7 +25,7 @@
         <TextView
             android:id="@+id/name_text_view"
             android:layout_width="match_parent"
-            android:layout_height="44dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
@@ -36,7 +36,7 @@
         <TextView
             android:id="@+id/description_text_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:layout_below="@id/name_text_view"
             android:layout_weight="1"
             android:gravity="top"
@@ -44,12 +44,5 @@
             android:textColor="@android:color/white"
             tools:text="one" />
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="16dp"
-            android:src="" />
     </RelativeLayout>
 </RelativeLayout>

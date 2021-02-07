@@ -41,7 +41,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
         description.setText(word.getDescription());
 
         ImageView imageView = listItemView.findViewById(R.id.image);
-
+        imageView.setImageResource(word.getImageResourceId());
+        // Make sure the view is visible
         imageView.setVisibility(View.VISIBLE);
 
         // Set the theme color for the list item
