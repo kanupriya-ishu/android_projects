@@ -71,6 +71,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        RelativeLayout religious = findViewById(R.id.religiousPlaces);
+
+        eateries.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Intent religiousIntent = new Intent(MainActivity.this, ReligiousPlaces.class);
+
+                // Start the new activity
+                startActivity(religiousIntent);
+            }
+        });
+
 
     }
 }
