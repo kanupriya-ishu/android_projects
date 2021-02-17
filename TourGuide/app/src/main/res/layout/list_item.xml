@@ -42,7 +42,9 @@
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/white"
-            tools:text="one" />
+            tools:text="one"
+            android:layout_gravity="center_vertical|end"
+            android:justificationMode="inter_word"/>
 
     </RelativeLayout>
 </RelativeLayout>

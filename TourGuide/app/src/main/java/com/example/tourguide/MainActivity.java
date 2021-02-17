@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         RelativeLayout hotels = findViewById(R.id.hotels);
 
-        eateries.setOnClickListener(new View.OnClickListener() {
+        hotels.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
             @Override
             public void onClick(View view) {
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
         RelativeLayout religious = findViewById(R.id.religiousPlaces);
 
-        eateries.setOnClickListener(new View.OnClickListener() {
+        religious.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
             @Override
             public void onClick(View view) {
