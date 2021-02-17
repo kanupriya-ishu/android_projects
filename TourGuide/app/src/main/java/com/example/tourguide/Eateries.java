@@ -18,25 +18,35 @@ public class Eateries extends AppCompatActivity {
 
         final ArrayList<Word> words = new ArrayList<Word>();
 
-        words.add(new Word("The Gateway of India",
-                "",
-                R.drawable.attractions1));
+        words.add(new Word("Kyani’s, Lohar Chawl",
+                "Kyani’s in Marine Lines is your one comfort food eatery. The best thing " +
+                        "to munch on their egg dishes, sodas, caramel custards, and their beautiful" +
+                        " cake. ",
+                R.drawable.eateries1));
 
-        words.add(new Word("Marine Drive",
-                "",
-                R.drawable.attractions2));
+        words.add(new Word("Canon Pav Bhaji, CSMT",
+                "This little place is right opposite the majestic CSMT Station and serves" +
+                        " pav bhaji with a slab of Amul butter on it. The best dishes to try here " +
+                        "are Amul Pav Bhaji and Cheese Pav Bhaji.",
+                R.drawable.eateries2));
 
-        words.add(new Word("Bandra-Worli Sea Link",
-                "",
-                R.drawable.attractions3));
+        words.add(new Word("Britannia & Co",
+                "Britannia & Co is not your usual Irani restaurant, this place has been " +
+                        "running for approximately 95 years now. This little cafe in Bombay has the" +
+                        " best Mutton Berry Pulao which is their star dish.",
+                R.drawable.eateries3));
 
-        words.add(new Word("Kanheri Cave",
-                "",
-                R.drawable.attractions4));
+        words.add(new Word("K Rustom",
+                "K Rustom is a cute little ice cream shop in the Marine Drive area. Now, " +
+                        "this is not your usual ice cream, it is sandwich ice cream, which tastes" +
+                        " delicious! ",
+                R.drawable.eateries4));
 
-        words.add(new Word("Elephanta Island",
-                "The attraction is home to rock-cut cave temples honoring the Hindu god Shiva.",
-                R.drawable.attractions5));
+        words.add(new Word("Yazdani Bakery, Horniman Circle",
+                "This little Irani outlet has the best chi and bun maska. You can also try" +
+                        " their puddings. If you want to give your taste buds a vintage tinkle, then" +
+                        " this is a must-visit breakfast place and also for your evenings. ",
+                R.drawable.eateries5));
 
         WordAdapter adapter = new WordAdapter(this, words, R.color.category_attractions);
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.

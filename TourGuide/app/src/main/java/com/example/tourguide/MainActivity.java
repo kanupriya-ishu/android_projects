@@ -43,5 +43,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        RelativeLayout eateries = findViewById(R.id.eateries);
+
+        eateries.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Intent eateriesIntent = new Intent(MainActivity.this, Eateries.class);
+
+                // Start the new activity
+                startActivity(eateriesIntent);
+            }
+        });
+
+
     }
 }
