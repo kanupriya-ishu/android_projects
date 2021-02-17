@@ -57,6 +57,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        RelativeLayout hotels = findViewById(R.id.hotels);
+
+        eateries.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Intent hotelsIntent = new Intent(MainActivity.this, Hotels.class);
+
+                // Start the new activity
+                startActivity(hotelsIntent);
+            }
+        });
+
 
     }
 }
