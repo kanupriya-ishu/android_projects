@@ -4,11 +4,11 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <color name="category_attractions">#FD8E09</color>
+    <color name="category_attractions">#514663</color>
 
-    <color name="category_hotels">#379237</color>
+    <color name="category_hotels">#8CBA80</color>
 
-    <color name="category_eateries">#8800A0</color>
+    <color name="category_eateries">#4D5382</color>
 
-    <color name="category_religious">#16AFCA</color>
+    <color name="category_religious">#658E9C</color>
 </resources>
