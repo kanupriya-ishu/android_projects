@@ -1,2 +1,2 @@
 # TourGuide 
-This app is a tour guide of Mumbai city.
+This app is a tour guide of Mumbai city. If you are someone who is visiting Mumbai, this app will come handy to you. This app contains top attractions, eateries, hotels and religious places of Mumbai.
