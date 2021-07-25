@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.app.LoaderManager;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Loader;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,9 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
      */
     private static final int EARTHQUAKE_LOADER_ID = 1;
 
+    /** TextView that is displayed when the list is empty */
+    private TextView mEmptyStateTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +50,9 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
         earthquakeListView.setAdapter(mAdapter);
+
+        mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
+        earthquakeListView.setEmptyView(mEmptyStateTextView);
 
         // Set an item click listener on the ListView, which sends an intent to a web browser
         // to open a website with more information about the selected earthquake.
@@ -79,6 +86,8 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
 
     @Override
     public Loader<List<Earthquake>> onCreateLoader(int i, Bundle bundle) {
+        // Set empty state text to display "No earthquakes found."
+        mEmptyStateTextView.setText(R.string.no_earthquakes);
         Log.i(LOG_TAG, "onCreateLoader() run");
         // Create a new loader for the given URL
         return new EarthquakeLoader(this, USGS_REQUEST_URL);
